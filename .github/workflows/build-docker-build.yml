@@ -47,5 +47,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
+          file: ./Dockerfile.build
           tags: |
             ${{ env.DOCKERHUB_REPO }}:build-${{ env.APP_VERSION }}
